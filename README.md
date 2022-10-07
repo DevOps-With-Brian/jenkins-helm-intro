@@ -1,8 +1,8 @@
 # jenkins-helm-intro
-A intro repo showing all about jenkins as code using helm.
+A intro repo showing all about [Jenkins as Code](https://www.jenkins.io/projects/jcasc/) using helm and kubernetes.
 
 # Setup
-Ensure you have Helm installed prior to running anything below.
+Ensure you have [Helm](https://helm.sh/docs/intro/install/) installed prior to running anything below.
 
 1. Add the repo to helm:
 
