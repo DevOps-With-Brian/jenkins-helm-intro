@@ -1,0 +1,16 @@
+controller:
+  installPlugins:
+    - kubernetes
+    - git
+    - configuration-as-code
+  additionalPlugins:
+    - hashicorp-vault-plugin
+    - job-dsl
+
+  JSasC:
+    defaultConfig: true
+    configScripts:
+      welcome-message: |
+        jenkins:
+          systemMessage: Welcome to jenkins as code.
+  serviceType: NodePort
