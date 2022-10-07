@@ -1,5 +1,5 @@
 # jenkins-helm-intro
-A intro repo showing all about [Jenkins as Code](https://www.jenkins.io/projects/jcasc/) using helm and kubernetes.
+A intro repo showing all about [Jenkins as Code](https://www.jenkins.io/projects/jcasc/) using helm and kubernetes.  Later topics on our video series will also include Vault for secrets management and using AWS for our nodes to run our jobs against.
 
 # Setup
 Ensure you have [Helm](https://helm.sh/docs/intro/install/) installed prior to running anything below.
