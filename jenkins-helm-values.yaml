@@ -6,11 +6,33 @@ controller:
   additionalPlugins:
     - hashicorp-vault-plugin
     - job-dsl
+    - workflow-job:1254.v3f64639b_11dd
+    - workflow-multibranch:716.vc692a_e52371b_
 
-  JSasC:
+  JCasC:
     defaultConfig: true
     configScripts:
       welcome-message: |
         jenkins:
           systemMessage: Welcome to jenkins as code.
+      casc-jobs: |
+        jobs:
+          - script: >
+              folder('Seed_Jobs')
+          - script: >
+              job('Seed_Jobs/Seed All') {
+                scm {
+                  git ('https://github.com/btotharye/jenkins-test-jobs.git')
+                }
+                steps {
+                  dsl {
+                    external('jobs/*.groovy')  
+                    // default behavior
+                    // removeAction('IGNORE')      
+                    removeAction('DELETE')
+                  }
+                }
+              }
+        
   serviceType: NodePort
+  

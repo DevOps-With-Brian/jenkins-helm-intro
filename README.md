@@ -7,6 +7,7 @@ Ensure you have [Helm](https://helm.sh/docs/intro/install/) installed prior to r
 1. Add the repo to helm:
 
 `helm repo add jenkins https://charts.jenkins.io`
+
 `helm repo update`
 
 2. Install the chart via the following command:
